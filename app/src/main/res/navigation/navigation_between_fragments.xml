@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_between_fragments"
+    app:startDestination="@id/hotel">
+
+    <fragment
+        android:id="@+id/hotel"
+        android:name="com.example.hotel.Hotel"
+        android:label="fragment_hotel"
+        tools:layout="@layout/fragment_hotel" >
+        <action
+            android:id="@+id/action_hotel_to_hotelRoom"
+            app:destination="@id/hotelRoom" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotelRoom"
+        android:name="com.example.hotel.HotelRoom"
+        android:label="fragment_hotel_room"
+        tools:layout="@layout/fragment_hotel_room" >
+        <action
+            android:id="@+id/action_hotelRoom_to_booking"
+            app:destination="@id/booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/booking"
+        android:name="com.example.hotel.Booking"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_booking_to_theOrderIsPaid"
+            app:destination="@id/theOrderIsPaid" />
+    </fragment>
+    <fragment
+        android:id="@+id/theOrderIsPaid"
+        android:name="com.example.hotel.TheOrderIsPaid"
+        android:label="fragment_the_order_is_paid"
+        tools:layout="@layout/fragment_the_order_is_paid" />
+</navigation>
